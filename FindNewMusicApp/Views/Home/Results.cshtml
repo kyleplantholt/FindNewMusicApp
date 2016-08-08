@@ -1,0 +1,506 @@
+﻿
+@{
+    ViewBag.Title = "Results";
+    ViewBag.Title = "city";
+}
+
+<div class="jumbotron jumbotron-special">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well well-sm">Similar Artists to @ViewBag.api_spotify_searched_artist </div>
+
+                <br />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_0[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+                <a href="@ViewBag.artist_pics_sites_0[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[0] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[0]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+</div>
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_1[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+                <a href="@ViewBag.artist_pics_sites_1[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[1] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[1]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+
+
+            </div>
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_2[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+                <a href="@ViewBag.artist_pics_sites_2[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[2] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[2]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_3[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+                <a href="@ViewBag.artist_pics_sites_3[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[3] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[3]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+
+
+
+
+            </div>
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_4[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+
+                <a href="@ViewBag.artist_pics_sites_4[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[4] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[4]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <img src="@ViewBag.artist_pics_sites_5[0]" class="img-thumbnail"  width="150" height="150" >
+                <br />
+                <a href="@ViewBag.artist_pics_sites_5[1]" target="_blank" class="btn btn-primary btn-block active" role="button">@ViewBag.api_spotify_artist_names[5] (listen)</a>
+
+                <form method="post" action="">
+                    <input type="hidden" name="artist" value=@ViewBag.api_spotify_artist_names[5]>
+                    <input type="hidden" name="state" value="@ViewBag.state_from_input">
+                    <input type="hidden" name="city" value="@ViewBag.city_from_input">
+                    <button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Similar Artists</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+@if (ViewBag.api_ticketmaster_show_1[0] == null && ViewBag.api_ticketmaster_show_2[0] == null && ViewBag.api_ticketmaster_show_3[0] == null && ViewBag.api_ticketmaster_show_4[0] == null && ViewBag.api_ticketmaster_show_5[0] == null && ViewBag.api_ticketmaster_show_6[0] == null)
+{ <div class="well well-sm">No Upcoming Shows</div>}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+
+
+
+                <div class="well well-sm">Upcoming Shows</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Location</th>
+                            <th>Address</th>
+                            <th>Ticket Link</th>
+                            <th>Ticket Status</th>
+                            <th>Distance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @if (ViewBag.api_ticketmaster_show_13[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_13[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_13[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_13[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_13[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_13[4], @ViewBag.api_ticketmaster_show_13[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_13[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_13[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_13[8]</td>
+                                <td>@ViewBag.miles_away_12</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_14[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_14[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_14[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_14[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_14[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_14[4], @ViewBag.api_ticketmaster_show_14[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_14[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_14[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_14[8]</td>
+                                <td>@ViewBag.miles_away_13</td>
+                            </tr>
+                        }
+
+                        @if (ViewBag.api_ticketmaster_show_1[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_1[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_1[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_1[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_1[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_1[4], @ViewBag.api_ticketmaster_show_1[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_1[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_1[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_1[8]</td>
+                                <td>@ViewBag.miles_away_0</td>
+                            </tr>
+                        }
+
+                        @if (ViewBag.api_ticketmaster_show_2[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_2[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_2[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_2[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_2[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_2[4], @ViewBag.api_ticketmaster_show_2[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_2[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_2[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_2[8]</td>
+                                <td>@ViewBag.miles_away_1</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_3[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_3[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_3[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_3[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_3[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_3[4], @ViewBag.api_ticketmaster_show_3[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_3[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_3[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_3[8]</td>
+                                <td>@ViewBag.miles_away_2</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_4[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_4[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_4[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_4[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_4[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_4[4], @ViewBag.api_ticketmaster_show_4[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_4[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_4[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_4[8]</td>
+                                <td>@ViewBag.miles_away_3</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_5[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_5[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_5[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_5[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_5[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_5[4], @ViewBag.api_ticketmaster_show_5[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_5[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_5[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_5[8]</td>
+                                <td>@ViewBag.miles_away_4</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_6[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_6[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_6[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_6[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_6[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_6[4], @ViewBag.api_ticketmaster_show_6[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_6[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_6[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_6[8]</td>
+                                <td>@ViewBag.miles_away_5</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_7[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_7[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_7[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_7[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_7[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_7[4], @ViewBag.api_ticketmaster_show_7[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_7[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_7[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_7[8]</td>
+                                <td>@ViewBag.miles_away_6</td>
+                            </tr>
+                        }
+
+                        @if (ViewBag.api_ticketmaster_show_8[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_8[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_8[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_8[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_8[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_8[4], @ViewBag.api_ticketmaster_show_8[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_8[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_8[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_8[8]</td>
+                                <td>@ViewBag.miles_away_7</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_9[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_9[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_9[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_9[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_9[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_9[4], @ViewBag.api_ticketmaster_show_9[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_9[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_9[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_9[8]</td>
+                                <td>@ViewBag.miles_away_8</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_10[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_10[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_10[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_10[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_10[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_10[4], @ViewBag.api_ticketmaster_show_10[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_10[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_10[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_10[8]</td>
+                                <td>@ViewBag.miles_away_9</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_11[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_11[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_11[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_11[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_11[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_11[4], @ViewBag.api_ticketmaster_show_11[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_11[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_11[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_11[8]</td>
+                                <td>@ViewBag.miles_away_10</td>
+                            </tr>
+                        }
+                        @if (ViewBag.api_ticketmaster_show_12[0] != null)
+                        {
+                            <tr>
+                                <td scope="row"><b>@ViewBag.api_ticketmaster_show_12[0]</b></td>
+                                <td>@ViewBag.api_ticketmaster_show_12[1]</td>
+                                <td>@ViewBag.api_ticketmaster_show_12[2]</td>
+                                <td>@ViewBag.api_ticketmaster_show_12[3]</td>
+                                <td>@ViewBag.api_ticketmaster_show_12[4], @ViewBag.api_ticketmaster_show_12[5]</td>
+                                <td>@ViewBag.api_ticketmaster_show_12[6]</td>
+                                <td><a href="@ViewBag.api_ticketmaster_show_12[7]" target="_blank">Buy Tickets</a></td>
+                                <td>@ViewBag.api_ticketmaster_show_12[8]</td>
+                                <td>@ViewBag.miles_away_11</td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+
+
+
+            <div class="well well-sm">Search</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <form method="post" action="">
+
+            <label for="InputArtist">Artist</label>
+            <input type="text" class="form-control" id="InputArtist" placeholder="Enter artist name..." name="artist">    <br />
+    </div>
+    <div class="col-sm-6">
+
+        <div id="locationField">
+            <label for="autocomplete">Address</label>
+            <input id="autocomplete" class="form-control" placeholder="Enter your address..."
+                   onFocus="geolocate()" type="text"></input>
+
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div id="address_form_table">
+    <table class="table" id="address">
+        <tr>
+            <td class="label">Street address</td>
+            <td class="slimField">
+                <input class="field" id="street_number"
+                       disabled="true"></input>
+            </td>
+            <td class="wideField" colspan="2">
+                <input class="field" id="route"
+                       disabled="true"></input>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">City</td>
+            <td class="wideField" colspan="3">
+                <input class="text" name="city" id="locality"
+                       disabled="true"></input>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">State</td>
+            <td class="slimField">
+                <input class="text"
+                       id="administrative_area_level_1" name="state" disabled="true"></input>
+            </td>
+            <td class="label">Zip code</td>
+            <td class="wideField">
+                <input class="field" id="postal_code"
+                       disabled="true"></input>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Country</td>
+            <td class="wideField" colspan="3">
+                <input class="field"
+                       id="country" disabled="true"></input>
+            </td>
+        </tr>
+    </table>
+</div>
+<button type="submit" value="Submit" id="submit" class="btn btn-primary btn-block active">Submit</button>
+  </form>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-MZhZuWjzvAzM3HdpjCJw0P1frncbm08&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+
+
+    var placeSearch, autocomplete;
+    var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+    };
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            //** type {!HTMLInputElement} */
+                (document.getElementById('autocomplete')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+    }
+
+    function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+            document.getElementById(component).value = '';
+            document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+            var addressType = place.address_components[i].types[0];
+            if (componentForm[addressType]) {
+                var val = place.address_components[i][componentForm[addressType]];
+                document.getElementById(addressType).value = val;
+            }
+        }
+    }
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
