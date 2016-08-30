@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+// Comments added by Justin Marshall to test git hub commits
+
 namespace FindNewMusicApp.Controllers
 {
     public class HomeController : Controller
