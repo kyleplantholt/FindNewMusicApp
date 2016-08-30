@@ -1,7 +1,6 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:grey;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -10,8 +9,8 @@
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists
-   will truncate terms that are too long to fit in the left column
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -22,163 +21,4 @@ input,
 select,
 textarea {
     max-width: 280px;
-}
-.jumbotron-original {
-    background-image: url('13737692_10153566864612245_1203599426200090423_o.jpg');
-    background-size: cover;
-    border: solid;
-    border-width: 2px;
-    border-color: dimgray;
-}
-.jumbotron-original h1{
-    color:white;
-    font-size:50px;
-color:goldenrod;
-text-shadow:1px 1px 0 #fff,
-
-4px 15px 9px #000;
- font-weight: bold;
-font-family:Verdana, Geneva, sans-serif;
-}
-.jumbotron-original p{
-    font-size:larger;
-    color:lawngreen;
-
-}
-
-table {
-  empty-cells:hide;
-
-}
-table th{
-    background-color:royalblue;
-    text-align:center;
-    color:white;
-
-}
-table td{
-    background-color:darkgrey;
-}
-tagname:empty {
- display: none;
-}
-td:empty {
-  visibility: hidden;
-}
-table:empty {
-  empty-cells:hide;
-}
-.jumbotron-special{
-    border: solid;
-    border-width: 2px;
-    border-color:dimgray;
-    color:antiquewhite;
-    background-color:steelblue;
-    text-align: center;
-
-
-
-}
-.jumbotron-special h4 {
-    color:black;
-    }
-.jumbotron-special p {
-    font-size:medium;
-    text-align:left;
-    }
-a:link {
-
-}
-a:hover {
-    color:crimson;
-}
-
-.well-sm {
-
-    text-align:center;
-    font-size:x-large;
-    border: solid;
-    border-width: 2px;
-    border-color:dimgray;
-    color:darkblue;
-    background-color: rgba(255,255,255,0.4);
-
-
-font-size:26px;
-
-text-shadow:
-
--1px 1px 0 #fff,
-0px 1px 0 #fff,
-1px 0px 0 #fff,
-0px -1px 0 #fff,
--1px 0px 0 #fff,
-4px 2px 3px #000;
- font-weight: bold;
-font-family:Verdana, Geneva, sans-serif;
-}
-.well1{
-background-color: rgba(251,253,255,0.7);
-text-align:center;
-color:black;
-font-size:19px;
-
-text-shadow:
-
-
-
-
-
-font-family:Verdana, Geneva, sans-serif;
-text-decoration-style:solid;
-}
-
-.btn-sample {
-  color: #000000;
-  background-color: #28829E;
-  border-color: #130269;
-}
-
-.btn-sample:hover,
-.btn-sample:focus,
-.btn-sample:active,
-.btn-sample.active,
-.open .dropdown-toggle.btn-sample {
-  color: #000000;
-  background-color: #BECCCB;
-  border-color: #130269;
-}
-
-.btn-sample:active,
-.btn-sample.active,
-.open .dropdown-toggle.btn-sample {
-  background-image: none;
-}
-
-.btn-sample.disabled,
-.btn-sample[disabled],
-fieldset[disabled] .btn-sample,
-.btn-sample.disabled:hover,
-.btn-sample[disabled]:hover,
-fieldset[disabled] .btn-sample:hover,
-.btn-sample.disabled:focus,
-.btn-sample[disabled]:focus,
-fieldset[disabled] .btn-sample:focus,
-.btn-sample.disabled:active,
-.btn-sample[disabled]:active,
-fieldset[disabled] .btn-sample:active,
-.btn-sample.disabled.active,
-.btn-sample[disabled].active,
-fieldset[disabled] .btn-sample.active {
-  background-color: #28829E;
-  border-color: #130269;
-}
-
-.btn-sample .badge {
-  color: #28829E;
-  background-color: #000000;
-}
-
-#address_form_table {
-    display:none;
 }

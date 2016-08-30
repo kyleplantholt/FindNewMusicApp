@@ -34,8 +34,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IncludeIisSettings>true</IncludeIisSettings>
-    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,9 +42,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IncludeIisSettings>false</IncludeIisSettings>
-    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
-    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -189,28 +184,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CreateLatLongAPI.cs" />
-    <Compile Include="Models\GetBands.cs" />
-    <Compile Include="Models\GetDistance.cs" />
-    <Compile Include="Models\ParseLongLat.cs" />
-    <Compile Include="Models\GetShows.cs" />
-    <Compile Include="Models\GoogleMaps.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ParseForSearchedArtist.cs" />
-    <Compile Include="Models\Show.cs" />
-    <Compile Include="Models\SpotifyArtistID.cs" />
-    <Compile Include="Models\SpotifyArtistInfo.cs" />
-    <Compile Include="Models\SpotifyArtistNames.cs" />
-    <Compile Include="Models\TicketmasterShows.cs" />
-    <Compile Include="Models\TicketMasterShows2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\10548172_10152243995397245_2743733757936857682_o.jpg" />
-    <Content Include="Content\10608219_10152243988007245_5036034076286787589_o.jpg" />
-    <Content Include="Content\13737692_10153566864612245_1203599426200090423_o.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -219,12 +198,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Properties\PublishProfiles\FindNewMusicApp.pubxml" />
-    <None Include="Properties\PublishProfiles\kyleplantholt.com - Web Deploy %282%29.pubxml" />
-    <None Include="Properties\PublishProfiles\kyleplantholt.com - Web Deploy %283%29.pubxml" />
-    <None Include="Properties\PublishProfiles\kyleplantholt.com - Web Deploy %284%29.pubxml" />
-    <None Include="Properties\PublishProfiles\kyleplantholt.com - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -244,9 +217,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -273,7 +244,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Results.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
